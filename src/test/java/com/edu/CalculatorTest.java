@@ -22,4 +22,16 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         Assert.assertEquals(45, calculator.multiplication(5, 9), 0);
     }
+
+    @Test
+    public void divisionTest(){
+        Calculator calculator = new Calculator();
+        Assert.assertEquals(5.5, calculator.division(55, 10), 0);
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void divisionByZeroTest(){
+        Calculator calculator = new Calculator();
+        calculator.division(10, 0);
+    }
 }
